@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-     'dashboard.apps.DashboardConfig', # Custom application 'dashboard' is added to the project, using its specific app configuration class.
+    'dashboard.apps.DashboardConfig', # Custom application 'dashboard' is added to the project, using its specific app configuration class.
   
 ]
 
