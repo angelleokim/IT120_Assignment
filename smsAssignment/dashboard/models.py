@@ -15,4 +15,8 @@ class Message(models.Model):
     # Define an 'event_name' field to store the name of the event.
     event_name = models.CharField(max_length=100, default='Default Team')
 
-    
+     # Define an 'event_date' field to store the date of the event. Default to today's date.
+    event_date = models.DateField(default=timezone.now)  # Default to the current date
+
+    # Define an 'event_time' field to store the time of the event. Use the callable function for the default value.
+    event_time = models.TimeField(default=get_current_time)  # Default to the current time using a callable function
