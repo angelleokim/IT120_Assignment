@@ -28,8 +28,8 @@ After sending the SMS, the user receives a confirmation message indicating succe
 
 How to Run:
 1. Clone the Repository:   
-    git clone <repository-url>  
-    cd <project-directory>  
+    git clone https://github.com/angelleokim/IT120_Assignment.git 
+    cd smsAssigment 
     
 2. Install Dependencies:
     pip install -r requirements.txt
