@@ -31,6 +31,9 @@ class Message(models.Model):
         account_sid = 'AC1b19cb75cd7b50ca291b1d8bf468927b'
         auth_token = '3812cc79f8af6961154bc2e127c76685'
         client = Client(account_sid, auth_token)
-
+        # Create the event reminder SMS message body with team and event details.
+        body = f"Hi {self.team_name}, this is a reminder about our upcoming event: {self.event_name} on {self.event_date} at {self.event_time}. Let's gather prepared and ready to discuss our next steps. Keep up the great work, and see you all there!"
+        
+        
         # Call the parent class's save method to ensure normal behavior.
         return super().save(*args, **kwargs)
