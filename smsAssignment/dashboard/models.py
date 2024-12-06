@@ -20,3 +20,14 @@ class Message(models.Model):
 
     # Define an 'event_time' field to store the time of the event. Use the callable function for the default value.
     event_time = models.TimeField(default=get_current_time)  # Default to the current time using a callable function
+
+    # String representation of the model; returns the team name and event name.
+    def __str__(self):
+        return f"{self.team_name} - {self.event_name}"
+
+    # Overriding the save method to include custom behavior when saving an object.
+    def save(self, *args, **kwargs):
+
+
+        # Call the parent class's save method to ensure normal behavior.
+        return super().save(*args, **kwargs)
