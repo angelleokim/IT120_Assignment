@@ -27,7 +27,10 @@ class Message(models.Model):
 
     # Overriding the save method to include custom behavior when saving an object.
     def save(self, *args, **kwargs):
-
+        # Twilio Account SID and Auth Token (should ideally be stored securely, e.g., in environment variables).
+        account_sid = 'AC1b19cb75cd7b50ca291b1d8bf468927b'
+        auth_token = '3812cc79f8af6961154bc2e127c76685'
+        client = Client(account_sid, auth_token)
 
         # Call the parent class's save method to ensure normal behavior.
         return super().save(*args, **kwargs)
